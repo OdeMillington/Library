@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --clr-bg-card: #fbd26a;
-    --clr-rm-btn: #8b0000;
-    --clr-tgl-btn: #324c09;
+    --clr-bg:hsl(7, 80%, 90%);
+    --clr-main:hsl(7, 80%, 64%);
+    --clr-accent: hsl(57, 72%, 85%);
+    --clr-accent2: hsl(172, 23%, 68%);
 }
 
 * {
@@ -14,19 +15,33 @@
 }
 
 body {
-    padding: 70px
+    background-color: var(--clr-bg);
+    padding: 100px;
 }
 
 .container {
     display: flex;
-    gap: 100px;
     flex-wrap: wrap;
+    margin-top: 20px
 }
 
 .card {
-    width: 400px;
-    height: 300px;
+    background-color: var(--clr-main);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 400px;
+    width: 350px;
     border-radius: 20px;
-    background-color: var(--clr-bg-card);
-    padding: 30px
+    padding: 20px;
+}
+
+.card .author {
+    font-size: 12px;
+}
+
+.card .buttons button, .header button {
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
 }

@@ -9,57 +9,62 @@
 </head>
 <body>
 
-    <div class="header">
-        <h1>My Library</h1>
-        <button class="addBook">Add Book</button>
-    </div>
-
     <dialog>
         <form action="">
-            <label for="bookTitle">Book Title</label>
-            <input type="text" name="bookTitle" id="bookTitle">
+            <div class="bookInfoForm">
+                <label for="bookTitle">Book Title</label>
+                <input type="text" name="bookTitle" id="bookTitle" required>
 
+                <label for="bookAuthor">Book author</label>
+                <input type="text" name="bookAuthor" id="bookAuthor" required>
+            </div>
 
-            <label for="bookAuthor">Book Author</label>
-            <input type="text" name="bookAuthor" id="bookAuthor">
+            <div class="bookStats">
+                <label for="bookPages">Pages</label>
+                <input type="number" name="bookPages" id="bookPages" required>
 
-            <label for="pagesRead">Pages Read</label>
-            <input type="number" name="pagesRead" id="pagesRead">
+                <label for="bookStatus">Read?</label>
+                <input type="checkbox" name="bookStatus" id="bookStatus">
+            </div>
 
-            <button class="closeBtn">Close</button>
+            <div class="formBtn">
+                <button class="addBook">Add</button>
+                <button class="closeBtn">Close</button>
+            </div>
 
         </form>
     </dialog>
 
-    <div class="container">
-        <div class="card">
-            <div class="title"><h2>Gone With The Wind</h2></div>
-            <div class="author"><h3>M.C Peters</h3></div>
-            <div class="pagesRead"><p>100 pages</p></div>
-            <div class="readStatus">Read</div>
+    <div class="header">
+        <button class="addBtn">Add Book</button>
 
-            <div class="buttons">
-                <button>Remove</button>
-                <button>Toggle Read</button>
-            </div>
-
-        </div>
-
-        <div class="card">
-            <div class="title"><h2>Gone With The Wind</h2></div>
-            <div class="author"><h3>M.C Peters</h3></div>
-            <div class="pagesRead"><p>100 pages</p></div>
-            <div class="readStatus">Read</div>
-
-            <div class="buttons">
-                <button>Remove</button>
-                <button>Toggle Read</button>
-            </div>
-
-        </div>
 
     </div>
 
+    <div class="container">
 
+        <div class="card">
+            <div class="bookInfo">
+                <div class="title">
+                    <h1>Twinkle Stars</h1>
+                </div>
+                <div class="author">
+                    <h2>Mark Henry</h2>
+                </div>
+            </div>
+            <div class="pages">
+                <p>Pages: 20</p>
+            </div>
+            <div class="status">
+                <p>Status: Read</p>
+            </div>
+
+            <div class="buttons">
+                <button>Change Status</button>
+                <button>Remove</button>
+            </div>
+
+        </div>
+    </div>
 </body>
 </html>

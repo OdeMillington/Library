@@ -1,18 +1,25 @@
 // Modal Setup
-const dialog = document.querySelector("dialog")
-const closeBtn = document.querySelector("closeBtn")
+const modal = document.querySelector("dialog")
+const addBtn = document.querySelector(".addBtn")
+const closeBtn = document.querySelector(".closeBtn")
 
-let addBook = document.querySelector(".addBook")
-addBook.addEventListener("click", () => {
-    dialog.showModal()
+addBtn.addEventListener("click", () => {
+    modal.showModal()
 })
 
-closeBtn.addEventListener('click', (e) => {
+closeBtn.addEventListener("click", () => {
+    modal.close()
+})
+
+// Handling Input
+const addBook = document.querySelector(".addBook")
+
+addBook.addEventListener("click", (e) => {
     e.preventDefault()
-    dialog.close()
+
+    let bookTitle = document.querySelector("#bookTitle").value
+    let bookAuthor = document.querySelector("#bookAuthor").value
+    let bookPages = document.querySelector("#bookPages").value
+    let bookStatus = document.querySelector("#bookStatus").checked
+
 })
-
-
-
-const myLibrary = []
-
